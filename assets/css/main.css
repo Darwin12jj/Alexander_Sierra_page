@@ -3323,20 +3323,47 @@ input, select, textarea {
 		border-color: #5cc6a7;
 	}
   }
+  
 
-  
-  /* Estilos para dispositivos móviles */
-  @media (max-width: 767px) {
-	.cards-container {
-	  flex-wrap: nowrap;
-	  overflow-x: auto;
-	  -webkit-overflow-scrolling: touch;
-	  scroll-snap-type: x mandatory;
-	}
-  
-	.card {
-	  flex: 0 0 80%;
-	  margin: 0 10px;
-	  scroll-snap-align: start;
-	}
+
+/* .slider-container {
+	overflow-x: scroll;
+	white-space: nowrap; 
   }
+  
+  .slider {
+	display: flex;
+	transition: transform 0.5s ease;
+	width: fit-content;
+	margin: 0 auto;
+  }
+  
+  .card {
+	width: 300px;
+	margin-right: 20px;
+  }
+  
+  .card img {
+	width: 100%;
+	height: auto;
+  }
+  
+  .card-content {
+	padding: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+    .card {
+	flex: 0 0 calc(100% / 3 - 20px);
+	margin-right: 20px;
+	transition: transform 0.3s ease;
+  }
+ */
