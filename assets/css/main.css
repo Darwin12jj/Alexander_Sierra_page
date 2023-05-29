@@ -3114,6 +3114,9 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		/* SLIDER */
+
+
 	}
 
 /* Small */
@@ -3238,12 +3241,12 @@ input, select, textarea {
   
   .cards-container {
 	display: flex;
-	margin: 0 -10px; /* Margen negativo para compensar el margen de las tarjetas */
+	margin: 0; /* Margen negativo para compensar el margen de las tarjetas */
   }
   
   .card {
-	flex: 0 0 calc((100% - 20px) / 3); /* Ajusta el ancho de las tarjetas */
-	margin: 0 5px; /* Margen horizontal entre las tarjetas */
+	flex: 0 0 calc((100% - 35px) / 3); /* Ajusta el ancho de las tarjetas */
+	margin: 0 .4rem; /* Margen horizontal entre las tarjetas */
 	padding: 0;
 	border: none;
 	border-radius: 10px ;
@@ -3257,7 +3260,7 @@ input, select, textarea {
   }
   
   .card-content {
-	padding: 20px;
+	padding: 10px;
   }
   
   .card-content h2 {
@@ -3272,7 +3275,7 @@ input, select, textarea {
   
   .card-content a {
 	display: inline-block;
-	padding: 5px 10px;
+	padding: 3px 10px;
 	background-color: #ccc;
 	color: #fff;
 	text-decoration: none;
@@ -3307,19 +3310,23 @@ input, select, textarea {
   .prev-btn,
   .next-btn {
 	  background-color: #49bf9d;
-	  border: none;
+      border: 1px solid #49bf9d;
 	  color: #ffffff !important;
 	  border-radius: .5rem;
+	  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-	&.prev-btn,
-	.next-btn:hover {
-			  background-color: #5cc6a7;
-			  border-color: #5cc6a7;
-	}
-
-	&.prev-btn,
-	.next-btn:hover {
+	&:hover {
 		background-color: #5cc6a7;
 		border-color: #5cc6a7;
+	}
+
+	&:focus {
+		background-color: #38ca9e;
+		border-color: #5cc6a7;
+	}
+
+	&:active {
+		background-color: #3eb08f;
+		border-color: #3eb08f;
 	}
   }
