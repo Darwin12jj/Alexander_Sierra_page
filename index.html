@@ -32,7 +32,7 @@
 						</ul> -->
 					</section>
 
-				<!-- Two -->
+				<!-- Two 
 					<section id="two">
 						<h2>Testimonios</h2>
 						<div class="row">
@@ -70,7 +70,7 @@
 						<ul class="actions">
 							<li><a href="#" class="button">Full Portfolio</a></li>
 						</ul>
-					</section>
+					</section> -->
 
 <!-- 				Three 
 					<section id="three">
@@ -109,44 +109,6 @@
 							</div>
 						</div>
 					</section> -->
-
-
-
-
-
-
-					<section>
-						<h2>Diagnóstico Gratuito</h2>
-						<form method="post" action="#">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Nombre" />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</div>
-								<div class="col-12">
-									<select name="demo-category" id="demo-category">
-										<option value="">- Category -</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="col-12">
-									<textarea name="demo-message" id="demo-message" placeholder="Escribe tu problema" rows="6"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Enviar Mensaje" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-
 					<section>
 						<h2>Testimonios</h2>
 						<div class="slider-container position-relative vh-65">
@@ -205,6 +167,38 @@
 							<button class="prev-btn">&larr;</button>
 							<button class="next-btn">&rarr;</button>
 						  </div>
+					</section>
+
+					<section>
+						<h2>Diagnóstico Gratuito</h2>
+						<form method="post" action="#">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Nombre" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								</div>
+								<div class="col-12">
+									<select name="demo-category" id="demo-category">
+										<option value="">- Category -</option>
+										<option value="1">Manufacturing</option>
+										<option value="1">Shipping</option>
+										<option value="1">Administration</option>
+										<option value="1">Human Resources</option>
+									</select>
+								</div>
+								<div class="col-12">
+									<textarea name="demo-message" id="demo-message" placeholder="Escribe tu problema" rows="6"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Enviar Mensaje" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
 					</section>
 				<!-- Four -->
 				<!--
@@ -523,9 +517,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</section>
 				-->
-
 			</div>
-
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
@@ -550,10 +542,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				const slider = document.querySelector('.slider');
 				const prevBtn = document.querySelector('.prev-btn');
 				const nextBtn = document.querySelector('.next-btn');
-				const cardWidth = slider.querySelector('.card').offsetWidth + 20; // Ancho de la tarjeta + margen
+				const cardWidth = 250;
 				const cardsContainer = slider.querySelector('.cards-container');
 				const cardsCount = cardsContainer.querySelectorAll('.card').length;
-				const visibleCards = 3; // Número de tarjetas visibles a la vez
+				const visibleCards = 2; // Número de tarjetas visibles a la vez
 				const totalWidth = cardWidth * cardsCount;
 				const autoMoveInterval = 4000; // Intervalo de tiempo en milisegundos
 
@@ -596,6 +588,41 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				// Iniciar el movimiento automático al cargar la página
 				startAutoMove();
 				});
+
+				// Actualizar el tamaño de las tarjetas al cambiar el tamaño de la ventana
+window.addEventListener('resize', function() {
+  moveToNextCard();
+});
+
+// Función para controlar el comportamiento en los media queries
+function handleMediaQuery() {
+  const mediaQuery = window.matchMedia('(max-width: 980px)');
+
+  function mediaQueryHandler(e) {
+    if (e.matches) {
+      // Si el ancho de la ventana es menor o igual a 980px
+      // Se mueve de a una tarjeta a la vez y el ancho de las tarjetas ocupa el 100% del ancho de la ventana
+      visibleCards = 1;
+      updateCardWidth();
+    } else {
+      // Si el ancho de la ventana es mayor a 980px
+      // Se mueven tres tarjetas a la vez y el ancho de las tarjetas es fijo en 250px
+      visibleCards = 1;
+      cards.forEach(card => {
+        card.style.width = '250px';
+      });
+    }
+  }
+
+  // Llamamos a la función al cargar la página
+  mediaQueryHandler(mediaQuery);
+
+  // Agregamos un listener para escuchar los cambios en el media query
+  mediaQuery.addEventListener('change', mediaQueryHandler);
+}
+
+// Llamamos a la función para controlar el comportamiento en los media queries
+handleMediaQuery();
 			</script>
 	</body>
 </html>
