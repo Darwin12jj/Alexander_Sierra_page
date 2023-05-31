@@ -111,7 +111,7 @@
 					</section> -->
 					<section>
 						<h2>Testimonios</h2>
-						<div class="slider-container position-relative vh-65">
+						<div class="slider-container position-relative vh-50">
 							<div class="slider">
 							  <div class="cards-container">
 								<div class="card">
@@ -199,6 +199,133 @@
 								</div>
 							</div>
 						</form>
+					</section>
+					<section>		
+						<h2>Preguntas frecuentes</h2>										
+						<div id="Category1" class="w3-container category w3-animate-opacity">
+						<main>
+						
+						  <div class="container">
+						
+							<div class="accordion">
+							
+							 <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem ipsum dolor. Vitae, libero!
+								</div>
+							
+								<div class="accordion__item__content">
+								  	<p>
+										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, a?
+									</p>
+								</div>
+							  </div>
+							
+							
+							  <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem ipsum dolor sit amet.
+								</div>
+							
+								<div class="accordion__item__content">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi itaque cum necessitatibus nobis cupiditate eius accusantium tempore libero excepturi!
+								</p>
+						
+								</div>
+							  </div>
+							
+							  <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem ipsum dolor sit amet.
+								</div>
+							
+								<div class="accordion__item__content">
+								  <p>There are seven simple steps to make the perfect FAQ page for your business. The design of an FAQ page is crucial for an easy-to-use customer experience. Follow these steps and your customer success team will thank you. 
+								  </p>
+								</div>
+							  </div>
+							
+							  <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								</div>
+							
+								<div class="accordion__item__content">
+								  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui non inventore cum repellendus odio distinctio facilis, debitis temporibus tempora illo minima fugit ad modi repellat, dolorum illum perferendis hic. Optio!</p>
+								</div>
+							  </div>
+							</div> <!-- id accordion end -->
+						
+						  </div>
+						</main>
+						</div>
+						
+						
+						
+						<div id="Category2" class="w3-container category w3-animate-opacity">
+						<main>
+						
+						  <div class="container">
+						
+							<div class="accordion">
+						  
+						   <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem ipsum dolor sit amet consectetur.
+								</div>
+							
+								<div class="accordion__item__content">
+								  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, praesentium ipsam! Labore, nesciunt. Commodi laudantium nesciunt inventore possimus aliquam nobis in obcaecati? </p>
+								</div>
+							  </div>
+						
+						   <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem, ipsum dolor.
+								</div>
+							
+								<div class="accordion__item__content">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nisi deleniti impedit cupiditate beatae quae.</p>
+						
+								</div>
+							  </div>
+						  </div>
+						</main>
+						</div>
+						
+						
+						<!-- Another Category Starts Here -->
+						
+						<div id="Category3" class="w3-container category w3-animate-opacity">
+						<main>
+						
+						  <div class="container">
+						
+							<div class="accordion">
+						  
+						   <div class="accordion__item">
+								<div class="accordion__item__header">
+								Lorem ipsum dolor sit.
+								</div>
+							
+								<div class="accordion__item__content">
+								  <p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							  </div>
+						
+						   <div class="accordion__item">
+								<div class="accordion__item__header">
+								 Lorem ipsum dolor sit amet.
+								</div>
+							
+								<div class="accordion__item__content">
+								  <p>Lorem ipsum dolor sit amet.</p>
+								</div>
+							  </div>
+						  </div>
+						</main>
+						</div>						
 					</section>
 				<!-- Four -->
 				<!--
@@ -588,41 +715,92 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				// Iniciar el movimiento automático al cargar la página
 				startAutoMove();
 				});
-
-				// Actualizar el tamaño de las tarjetas al cambiar el tamaño de la ventana
-window.addEventListener('resize', function() {
-  moveToNextCard();
-});
-
-// Función para controlar el comportamiento en los media queries
-function handleMediaQuery() {
-  const mediaQuery = window.matchMedia('(max-width: 980px)');
-
-  function mediaQueryHandler(e) {
-    if (e.matches) {
-      // Si el ancho de la ventana es menor o igual a 980px
-      // Se mueve de a una tarjeta a la vez y el ancho de las tarjetas ocupa el 100% del ancho de la ventana
-      visibleCards = 1;
-      updateCardWidth();
-    } else {
-      // Si el ancho de la ventana es mayor a 980px
-      // Se mueven tres tarjetas a la vez y el ancho de las tarjetas es fijo en 250px
-      visibleCards = 1;
-      cards.forEach(card => {
-        card.style.width = '250px';
-      });
-    }
-  }
-
-  // Llamamos a la función al cargar la página
-  mediaQueryHandler(mediaQuery);
-
-  // Agregamos un listener para escuchar los cambios en el media query
-  mediaQuery.addEventListener('change', mediaQueryHandler);
-}
-
-// Llamamos a la función para controlar el comportamiento en los media queries
-handleMediaQuery();
 			</script>
+
+
+<script>
+
+	if ($(".accordion__item__header").length > 0) {
+	  var active = "active";
+	  $(".accordion__item__header").click(function () {
+		$(this).toggleClass(active);
+		$(this).next("div").slideToggle(200);
+	  });
+	}
+	  
+	</script>
+	<script>
+		function google_translate (){ 
+			var opt = { 
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+				pageLanguage: "en" 
+			}; 
+			new google.translate.TranslateElement( opt, "translation" ); 
+		} 
+		
+		/*  
+		Display the scrollable list of languages. 
+		Related to the size of current browser. 
+		*/
+		addEventListener( "load", function(){ 
+			if ( document.querySelector(".goog-te-menu-frame") ) { 
+			
+				document.getElementById( "translation" ).addEventListener( "click", function(){ 
+					if ( this.id === "translation" ) scrollableLanguagesList(); 
+				}); 
+				addEventListener( "resize", function(){ 
+					if ( "none" !== document.querySelector(".goog-te-menu-frame").style.display ) scrollableLanguagesList(); 
+				}); 
+			
+			} 
+		}); 
+		
+		function scrollableLanguagesList (){ 
+			var 
+			iframe = document.querySelector( ".goog-te-menu-frame" ), 
+			doc = iframe.contentWindow.document, 
+			div = doc.body.children[ 0 ], 
+			table = div.children[ 0 ], 
+			width = div.dataset.width || parseInt( div.style.width ), 
+			rect, diff; 
+			
+			if ( ! div.dataset.width ) div.dataset.width = width; 
+			
+			if ( innerWidth < width ) { 
+				rect = table.getBoundingClientRect(); 
+				width = rect.right - rect.left; 
+				diff = width - innerWidth; 
+				
+				div.style.width = ( width - diff - 24 ) + "px"; 
+				div.style.padding = "4px 0 1em 4px"; 
+				div.style.overflowX = "scroll"; 
+			} 
+			else { 
+				div.style.width = "auto"; 
+				div.style.padding = "4px"; 
+				div.style.overflowX = "visible"; 
+			} 
+			
+			rect = div.getBoundingClientRect(); 
+			iframe.style.width = ( rect.right - rect.left ) + "px"; 
+			iframe.style.height = ( rect.bottom - rect.top ) + "px"; 
+		} 
+		</script>
+		
+		<script type="text/javascript">
+		
+			$(document).ready(function() 
+			{       
+				translationTooltipsDisable();
+			});
+		
+			function translationTooltipsDisable()
+			{       
+				//Override google's functions
+				_tipon = function()  { /*Don't display the tooltip*/ };
+				_tipoff = function() { /*Don't hide the tooltip*/ };
+			}
+		
+		</script>
 	</body>
 </html>
