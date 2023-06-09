@@ -452,7 +452,6 @@ a.navbar-brand {
     background-color: #fefefd;
     height: auto;
     padding: 30px;
-    box-shadow: 0px 9px 15px 5px #ededed;
     border-radius: 8px;
     margin: 0 auto;
 }
@@ -502,6 +501,7 @@ a.navbar-brand {
 
 .online_box_left:hover {
     background-color: #e73232;
+    box-shadow: 0px 0px 25px 5px #ededed;
 }
 
 .online_box_left:hover .book_text {
