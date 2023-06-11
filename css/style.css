@@ -313,7 +313,7 @@ a.navbar-brand {
 .banner_section {
     width: 100%;
     float: left;
-    padding: 11vh 0px;
+    padding: 0 0 2%;
 }
 
 .banner_taital_main {
@@ -1117,7 +1117,6 @@ textarea#comment::placeholder {
 .mail_section {
     width: 100%;
     float: left;
-    margin-top: 30px;
 }
 
 .mail_text {
@@ -1412,4 +1411,26 @@ main {
 
 .mt-100 {
     margin-top: 100px;
+}
+
+/* NAVBAR IMG */
+.navbar-brand img{
+    max-width: 30%;
+    border-radius: 50%;
+}
+
+/* BENEFICIOS */
+.group-item {
+    color: #FFF;
+    width: auto;
+}
+
+/* DIAGNÓSTICO GRATUITO */
+
+.diagnostico_text {
+    text-align: left;
+}
+.diagnostico_text h1,
+.diagnostico_text h3 {
+    color: #001431
 }

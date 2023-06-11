@@ -270,6 +270,8 @@
     }
     a.navbar-brand {
         width: auto;
+        display: flex;
+        justify-content: center;
     }
     .header_section {
         background: #001431;
@@ -286,6 +288,7 @@
     }
     .banner_taital_main {
         padding-left: 0px;
+        text-align: center;
     }
     .banner_taital {
         width: 100%;
@@ -357,6 +360,9 @@
     figure img {
         width: 100%;
     }
+    .group-item {
+        text-align: center;
+    }
 }
 
 @media (max-width: 575px) {
@@ -389,6 +395,8 @@
     }
     a.navbar-brand {
         width: auto;
+        display: flex;
+        justify-content: center;
     }
     .header_section {
         background: #001431;
@@ -409,6 +417,7 @@
     .banner_taital {
         width: 100%;
         font-size: 34px;
+        text-align: center;
     }
     .readmore_btn {
         width: 137px;
@@ -475,5 +484,8 @@
     }
     figure img {
         width: 100%;
+    }
+    .group-item {
+        text-align: center;
     }
 }
