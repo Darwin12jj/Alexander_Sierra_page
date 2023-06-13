@@ -1434,3 +1434,20 @@ main {
 .diagnostico_text h3 {
     color: #001431
 }
+
+/* TOOLTIPS */
+a[title]::hover {
+    content: attr(title);
+    position: absolute;
+    background: yellow;
+    color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  a[title]:hover::after {
+    opacity: 1;
+  }

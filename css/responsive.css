@@ -363,6 +363,11 @@
     .group-item {
         text-align: center;
     }
+    .diagnostico_text h3,
+    .diagnostico_text h1 {
+        color: #FFF;
+        text-align: center;
+    }
 }
 
 @media (max-width: 575px) {
@@ -486,6 +491,11 @@
         width: 100%;
     }
     .group-item {
+        text-align: center;
+    }
+    .diagnostico_text h3,
+    .diagnostico_text h1 {
+        color: #FFF;
         text-align: center;
     }
 }
