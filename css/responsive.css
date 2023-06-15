@@ -272,6 +272,7 @@
         width: auto;
         display: flex;
         justify-content: center;
+        flex-direction: column;
     }
     .header_section {
         background: #001431;
@@ -402,6 +403,8 @@
         width: auto;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
     .header_section {
         background: #001431;

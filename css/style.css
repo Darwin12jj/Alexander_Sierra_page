@@ -322,9 +322,12 @@ a.navbar-brand {
     padding-left: 100px;
 }
 
+.banner_taital_main h1{
+    font-size: 30px;
+}
+
 .banner_taital {
-    width: 90%;
-    font-size: 60px;
+    width: auto;
     color: #fefefd;
     text-transform: uppercase;
     font-weight: bold;
@@ -1430,9 +1433,10 @@ main {
 .diagnostico_text {
     text-align: left;
 }
-.diagnostico_text h1,
-.diagnostico_text h3 {
-    color: #001431
+
+.diagnostico_text h1{
+    color: #001431;
+    font-size: 30px;
 }
 
 /* TOOLTIPS */
@@ -1450,4 +1454,9 @@ a[title]::hover {
   
   a[title]:hover::after {
     opacity: 1;
+  }
+
+  .position-relative {
+    max-width: auto;
+    margin-bottom: 20px; 
   }
